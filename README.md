@@ -33,6 +33,28 @@ _2. Navigate into the `{NAME_OF_DIRECTORY}` directory, and open in Visual Studio
 `code .`
 _3. Open index.html in Chrome or preferred browser_
 
+## TDD testing:
+
+Describe: toRomanNum();
+
+Test: "recognizes single digits as roman numerals"
+expect(toRomanNum(5)).toequal(V);
+
+Test: The most basic rule is that you add the value of all the symbols: so II is 2, LXVI is 66, etc.
+expect(toRomanNum(2)).toEqual(II);
+
+Test: The exception is that there may not be more than three of the same characters in a row, and if there is you switch to subtraction.
+expect(toRomanNum(9)).toEqual(IX);
+
+Test: You also have to separate ones, tens, hundreds, and thousands. In other words, 99 is XCIX, not IC. 
+expect(toRomanNum(99)).toEqual(XCIX);
+
+Test: You cannot count higher than 3,999 in Roman numerals.
+expect(toRomanNum(4000)).toEqual("This is beyond the limit of the roman numeral system");
+
+
+
+
 #### To see my live website go to {GH_PAGES_LINK_HERE}!
 
 ## Known Bugs
